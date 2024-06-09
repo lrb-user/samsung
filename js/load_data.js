@@ -1,0 +1,1 @@
+const main_bn_indi_title = ['Neo QLED', '김치 플러스' ,'Galaxy' ,'Team 삼성','공동구매']

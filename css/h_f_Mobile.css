@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flex_container {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  user-select: none;
+  font-family: "Cafe24SsurroundAir";
+}
+.wrap {
+  width: 100%;
+  /* max-width: 480px; */
+  /* 모바일형으로 만들때는 max-width안걸어도 됨. 그냥 width:100%로 하면 됨.반응형 할때만 하면 됨.  */
+  overflow: hidden;
+
+  /* position: relative; */
+}
+.h_top {
+  width: 100%;
+  height: 80px;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0 5px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+
+  /* position: relative; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:999999999999999999;
+  background: white;
+}
+.logo {
+  width: 140px;
+  /* height: 100%; */
+  background-image: url(../img/logo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* border:1px solid; */
+}
+.logo a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-indent: -9999px;
+}
+.h_top_R {
+  position: absolute;
+  right: 0;
+  gap: 15px;
+}
+.h_icon {
+  align-items: center;
+}
+.h_icon img {
+  width: 23px;
+  height: 23px;
+}
+.h_icon img:nth-child(1) {
+  margin-right: 15px;
+}
+.ham_btn {
+  width: 50px;
+  height: 50px;
+  padding: 7px;
+  /* border:1px solid; */
+  box-sizing: border-box;
+}
+.line {
+  width: 100%;
+  height: 5px;
+  background: #525252;
+  margin: 5px auto;
+  transition: all 0.3s;
+}
+.ham_pan {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  transform: translateX(100%);
+  transition: all 0.3s;
+  z-index: 999;
+}
+.ham_pan_active {
+  transform: translateX(0);
+  transition: all 0.3s;
+}
+.ham_pan_ul_1 {
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 50px;
+  font-size: 13px;
+}
+.ham_pan_ul_2 {
+  padding: 15px 50px;
+}
+.ham_pan_ul_2 li {
+  padding: 30px 0;
+  justify-content: space-between;
+}
+.ham_pan_ul_2 svg {
+  transform: rotate(90deg);
+}
+.ham_pan_ul_2 path {
+  fill: black;
+}
+footer {
+  color: #707070;
+}
+.footer_top_txt {
+  padding: 0 15px;
+  font-size: 12px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.footer_bot_txt {
+  padding: 10px 10px;
+}
+.footer_bot_txt path {
+  fill: #7c7979;
+  /* transform: rotate(90deg); */
+}
+.footer_bot_txt li {
+  justify-content: space-between;
+  padding: 5px 5px;
+  font-size: 15px;
+}
+.arrow {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 390px) {
+  .ham_pan_ul_1 {
+    display: block;
+  }
+  .ham_pan_ul_1 li:nth-child(2) {
+    margin: 5px 0;
+  }
+}
